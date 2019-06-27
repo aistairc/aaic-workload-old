@@ -36,24 +36,27 @@ All workload files are formatted in CSV and have the same format.
 Each line in a workload file is a record of a job.
 Each job record has the following 13 attributes.
 
-| Attribute | Meanings |
-|---------:|:---------|
-| Job ID | A unique sequential number assigned to each job. The number is unique only in a workload file. |
-| User | ID of a user who submit the job. User ID is unique only in a workload file. |
-| Group | ID of a group where a user who submit the job belongs. Group ID is unique only in a workload file. |
-| Queue | A queue where the job submitted. Queue name is an integer number. |
-| Nodes | Number of used nodes by the job. |
-| GPUs | Number of used GPUs within a node by the job. |
-| Requested Walltime | Walltime requested by job submitter. |
-| Termcode | Job termination code: success(0), fail(1), walltime exceeded(2), canceled by user(3) or canceled by system(4). |
-| Submit Timestamp | Time when job is submitted in UNIX timestamp. |
-| Start Timestamp | Time when job starts running in UNIX timestamp. |
-| Finish Timestamp | Time when job ends running in UNIX timestamp. |
-| Wait Time | Duration between time job submitted and time job starts in seconds. |
-| Walltime | Actual walltime of the job in seconds. |
+| Order | Attribute | Meanings |
+|:--:|---------:|:---------|
+|  1 | Job ID | A unique sequential number assigned to each job. The number is unique only in a workload file. |
+|  2 | User | ID of a user who submit the job. User ID is unique only in a workload file. |
+|  3 | Group | ID of a group where a user who submit the job belongs. Group ID is unique only in a workload file. |
+|  4 | Queue | A queue where the job submitted. Queue name is an integer number. |
+|  5 | Nodes | Number of used nodes by the job. |
+|  6 | GPUs |Number of used GPUs within a node by the job. |
+|  7 | Requested Walltime | Walltime requested by job submitter. |
+|  8 | Termcode | Job termination code: success(0), fail(1), walltime exceeded(2), canceled by user(3) or canceled by system(4). |
+|  9 | Submit Timestamp | Time when job is submitted in UNIX timestamp. |
+| 10 | Start Timestamp | Time when job starts running in UNIX timestamp. |
+| 11 | Finish Timestamp | Time when job ends running in UNIX timestamp. |
+| 12 | Wait Time | Duration between time job submitted and time job starts in seconds. |
+| 13 | Walltime | Actual walltime of the job in seconds. |
 
 
 ## Usage and Acknowledgment
+
+AAIC workload is copyrighted by AIST, National Institute of Advanced Industrial
+Science and Technology (国立研究開発法人 産業技術総合研究所 知財管理番号: H31PRO-2307).
 
 If you use this workload in your work, please add the following or a similar
 acknowledgement.
@@ -65,7 +68,8 @@ The AAIC workload log was graciously provided by AIRC, AIST.
 If you cite this workload, please add the following or a similar reference.
 
 ```
-Shinichiro Takizawa, Hirotaka Ogawa and Ryousei Takano, "AAIC Workload", https://github.com/aistairc/aaic-workload.
+Shinichiro Takizawa, Hirotaka Ogawa and Ryousei Takano, "AAIC Workload",
+https://github.com/aistairc/aaic-workload, 2019.
 ```
 
 
@@ -81,3 +85,4 @@ Papers and reports that use this workload.
 
 - [About AAIC](https://www.airc.aist.go.jp/info_details/computer-resources.html)
 - [AIRC, AIST](https://www.airc.aist.go.jp/en/)
+- [AIST](https://www.aist.go.jp/index_en.html)
