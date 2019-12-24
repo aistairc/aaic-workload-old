@@ -9,6 +9,42 @@ The current workload contains jobs submitted from July 14th, 2017 to
 December 31st, 2018.
 
 
+## System Overview
+
+![AAIC Architecture](https://raw.githubusercontent.com/aistairc/aaic-workload/master/aaic-arch.jpg)
+
+AAIC consists of 50 compute nodes equipped with GPUs (GPU nodes) and 68 CPU
+only compute nodes.
+Workloads published on this page are obtained from a batch job scheduling
+system that manages GPU nodes.
+Although there are 50 GPU nodes, the scheduling system manages 32 to 40 nodes
+depending on utilization.
+Remaining GPU nodes are used for other purposes.
+
+The table shows the resource quantity of a GPU node.
+
+|    Attribute |   Value |
+|         ---: |    ---: |
+|  # CPU cores |      20 |
+|       # GPUs |       8 |
+|       Memory | 256 GiB |
+| SSD Capacity |  480 GB |
+
+Here are the basic scheduling policy.
+
+- There are 32 to 40 GPU nodes managed by the scheduling system.
+- There are 4 queues and they share the same resource pool.
+- The scheduling policy is based on FCFS and backfill.
+- The maximum number of nodes in a job is 32.
+- A Multi node jobs has to use all 8 GPUs in each node.
+- A job can use any number of GPUs (1 to 8) in a node when the job uses
+  only one node.
+- Multiple jobs that use only one node and only a few GPUs in a node can
+  run on the same node at the same time to improve GPU utilization.
+  For example, two jobs that use two GPUs and a job that uses 4 GPUs run on
+  the same node.
+
+
 ## Workload Files
 
 Workloads contained in this repository are formatted in CSV and distributed
