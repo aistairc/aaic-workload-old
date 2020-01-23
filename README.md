@@ -115,6 +115,10 @@ Papers and reports that use this workload.
 
 - 滝澤 真一朗, 小川 宏高, 高野 了成, 大規模GPUクラスタにおける深層学習ワークロードの
   傾向把握, 第170回ハイパフォーマンスコンピューティング研究会, July, 2019.
+- Shinichiro Takizawa, Ryousei Takano. Effect of an Incentive Implementation
+  for Specifying Accurate Walltime in Job Scheduling. Proceedings of the
+  International Conference on High Performance Computing in Asia-Pacific
+  Region (HPCAsia2020), Jan. 2020.
 
 
 ## Links
